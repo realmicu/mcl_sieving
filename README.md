@@ -1,3 +1,3 @@
-# mcl_sieve v0.1
+# mcl_sieving v0.1
 
 Put description here.
