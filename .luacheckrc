@@ -31,8 +31,10 @@ read_globals = {
     "unpack",
     "mcl_sounds",
     "mcl_core",
+    "mcl_formspec",
+    "mcl_util",
 
     string = {fields = {"split", "trim"}},
-    table  = {fields = {"copy", "copy_with_metatables", "getn", "indexof", "keyof", "insert_all", "shuffle"}},
+    table  = {fields = {"copy", "copy_with_metatables", "getn", "indexof", "keyof", "insert_all", "shuffle", "update", "merge"}},
     math   = {fields = {"hypot", "round", "isfinite", "sign"}},
 }
