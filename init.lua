@@ -255,7 +255,11 @@ local function bucket_sieve_on_punch(pos, node, puncher, pointed_thing)
                 end
                 meta:set_string("formspec", bucket_sieve_formspec(0))
             end
-            core.swap_node(pos, { name = sieve_node_name[def._mcl_sieve_type][num_punches % sieve_node_cycles[def._mcl_sieve_type]] })
+            local new_name = sieve_node_name[def._mcl_sieve_type][num_punches % sieve_node_cycles[def._mcl_sieve_type]]
+            if new_name ~= node.name then
+                node.name = new_name
+                core.swap_node(pos, node)
+            end
             return
         end
     end
