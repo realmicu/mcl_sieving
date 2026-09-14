@@ -29,6 +29,7 @@ read_globals = {
     "ValueNoise", "ValueNoiseMap",
     "tracy",
     "unpack",
+    "doc",
     "mcl_sounds",
     "mcl_core",
     "mcl_formspec",
