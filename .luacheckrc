@@ -9,7 +9,7 @@ ignore = {
 }
 
 globals = {
-    "mcl_sieve"
+    "mcl_sieving"
 }
 
 read_globals = {
