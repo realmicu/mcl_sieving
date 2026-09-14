@@ -21,7 +21,7 @@
 
 mcl_sieving = {}
 
---local modname = core.get_current_modname()
+local modname = core.get_current_modname()
 --local S = core.get_translator(modname)
 local S = function(s) return s end
 local C = core.colorize
@@ -137,7 +137,7 @@ local function room_for_items(inv, listname, itemlist)
     if inv:is_empty(listname) then return true end
     local lst = inv:get_list(listname)
     if not lst then return false end
-    local shadow_inv = core.create_detached_inventory("shadow_inv", {})
+    local shadow_inv = core.create_detached_inventory(modname .. "_room_check_inv", {})
     shadow_inv:set_size(listname, #lst)
     shadow_inv:set_list(listname, lst)
     for _, item in ipairs(itemlist) do
