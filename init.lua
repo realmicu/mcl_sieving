@@ -151,7 +151,7 @@ end
 
 -- Retrieve randomized sieved ore based on recipe for specific sieve type (or false for no luck)
 local function get_random_ore(sieve_type, input)
-    local rnd = math.random(0, recipes_by_input[sieve_type][input].samples)
+    local rnd = math.random(0, recipes_by_input[sieve_type][input].samples - 1)
     for _, o in ipairs(recipes_by_input[sieve_type][input].orequant) do
         if rnd >= o.quantity_ge then return o.ore end
     end
