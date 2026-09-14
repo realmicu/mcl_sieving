@@ -268,7 +268,7 @@ end
 
 local function bucket_sieve_allow_put(pos, listname, index, stack, player)
     local playername = player:get_player_name()
-        if core.is_protected(pos, playername) then
+    if core.is_protected(pos, playername) then
         core.record_protection_violation(pos, playername)
         return 0
     end
@@ -330,7 +330,7 @@ local function bucket_sieve_doc_items_usagehelp()
         S("Use the sieve to open the sieve menu."), " ",
         S("Put material in source slot and punch machine with full water container."), "\n",
         S("Sieving always produces one leftover material."), " ",
-        S("Additionally, there is a chance that valuable ore is gained in the process."),"\n",
+        S("Additionally, there is a chance that valuable ore is gained in the process."), "\n",
         S("It takes"), " ", PUNCHES_TO_SIEVE, " ",
         S("punches to sieve source material and uses all water in container, so having a water source nearby is recommended."), "\n\n",
         S("Water containers that can be used:"), " ", table.concat(c, " , "), "\n\n",
@@ -478,12 +478,12 @@ core.register_node("mcl_sieving:bucket_sieve_2",
 -- ========
 
 core.register_craft({
-        output = "mcl_sieving:bucket_sieve",
-        recipe = {
-                { "mcl_core:iron_ingot", "mcl_core:stick",      "mcl_core:iron_ingot" },
-                { "group:wood",          "mcl_core:iron_ingot", "group:wood"          },
-                { "group:wood",          "mcl_chests:chest",    "group:wood"          },
-        }
+    output = "mcl_sieving:bucket_sieve",
+    recipe = {
+        { "mcl_core:iron_ingot", "mcl_core:stick",      "mcl_core:iron_ingot" },
+        { "group:wood",          "mcl_core:iron_ingot", "group:wood"          },
+        { "group:wood",          "mcl_chests:chest",    "group:wood"          },
+    }
 })
 
 -- vi: tabstop=4 shiftwidth=4 expandtab
