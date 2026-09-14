@@ -414,7 +414,7 @@ core.register_node("mcl_sieving:bucket_sieve",
 
 core.register_node("mcl_sieving:bucket_sieve_2",
 {
-    description = "Bucket Sieve",
+    description = S("Bucket Sieve"),
     paramtype2 = "facedir",
     drop = "mcl_sieving:bucket_sieve",
     is_ground_content = false,
